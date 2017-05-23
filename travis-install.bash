@@ -27,12 +27,6 @@ if [ "${DRIVER}" = "tests/test_webdriver_firefox.py" ]; then
     mv ./geckodriver/geckodriver $HOME
     chmod 777 $HOME/geckodriver
 
-    curl "https://download.mozilla.org/?product=firefox-latest&lang=en-US&os=linux64" -L > firefox.tbz2
-    bzip2 -dc firefox.tbz2 | tar xvf -
-    mv ./firefox $HOME
-    export PATH=$HOME/firefox:$PATH
-    ls -lsa $HOME/geckodriver
-    ls -lsa $HOME/firefox
     export PATH=$HOME:$HOME/geckodriver:$PATH
 fi
 
