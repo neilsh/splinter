@@ -10,15 +10,15 @@ if [ "${DRIVER}" = "tests/test_djangoclient.py" ]; then
   pip install -q Django==${DJANGO_VERSION}
 fi
 
-if [ "${DRIVER}" = "tests/test_webdriver_remote.py" ]; then
+#if [ "${DRIVER}" = "tests/test_webdriver_remote.py" ]; then
   sleep 1
 
 	wget http://goo.gl/PJUZfa -O selenium-server.jar
 	java -jar selenium-server.jar > /dev/null 2>&1 &
 	sleep 1
-fi
+#fi
 
-if [ "${DRIVER}" = "tests/test_webdriver_firefox.py" ]; then
+#if [ "${DRIVER}" = "tests/test_webdriver_firefox.py" ]; then
     sleep 1
 
     wget https://github.com/mozilla/geckodriver/releases/download/v0.14.0/geckodriver-v0.14.0-linux64.tar.gz
@@ -28,11 +28,11 @@ if [ "${DRIVER}" = "tests/test_webdriver_firefox.py" ]; then
     chmod 777 $HOME/geckodriver
 
     export PATH=$HOME:$HOME/geckodriver:$PATH
-fi
+#fi
 
-if [ "${DRIVER}" = "tests/test_webdriver_chrome.py" ]; then
+#if [ "${DRIVER}" = "tests/test_webdriver_chrome.py" ]; then
     sleep 1
 
     FILE=`mktemp`; wget "http://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip" -qO $FILE && unzip $FILE chromedriver -d ~; rm $FILE; chmod 777 ~/chromedriver;
     export PATH=$HOME:$PATH
-fi
+#fi
