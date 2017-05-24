@@ -10,7 +10,6 @@ addons:
   apt:
     packages:
       - python-software-properties
-      - selenium
 # https://docs.travis-ci.com/user/gui-and-headless-browsers/#Using-xvfb-to-Run-Tests-That-Require-a-GUI
 before_install:
   - export DISPLAY=:99.0
@@ -40,6 +39,7 @@ matrix:
       env: DRIVER=tests/test_zopetestbrowser.py
 install:
   - export PATH=$HOME:$PATH
+  - pip install -r test-requirements.txt
   - ./travis-install.bash
   - make dependencies
 script: ./run_tests.py -w ${DRIVER}
