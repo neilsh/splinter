@@ -36,3 +36,5 @@ fi
     FILE=`mktemp`; wget "http://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip" -qO $FILE && unzip $FILE chromedriver -d ~; rm $FILE; chmod 777 ~/chromedriver;
     export PATH=$HOME:$PATH
 #fi
+
+ls -l $HOME
