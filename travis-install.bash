@@ -30,4 +30,3 @@ chmod +x $HOME/bin/chromedriver;
 export PATH=$HOME:$HOME/bin:$PATH
 
 ls -l $HOME/bin
-print -rl -- $commands
