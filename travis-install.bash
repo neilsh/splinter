@@ -14,9 +14,9 @@ fi
 wget http://goo.gl/PJUZfa -O selenium-server.jar
 java -jar selenium-server.jar > /dev/null 2>&1 &
 
-wget https://github.com/mozilla/geckodriver/releases/download/v0.14.0/geckodriver-v0.14.0-linux64.tar.gz
+wget https://github.com/mozilla/geckodriver/releases/download/v0.14.0/geckodriver-v0.16.1-linux64.tar.gz
 mkdir geckodriver
-tar -xzf geckodriver-v0.14.0-linux64.tar.gz -C geckodriver
+tar -xzf geckodriver-v0.16.1-linux64.tar.gz -C geckodriver
 mkdir $HOME/bin
 mv ./geckodriver/geckodriver $HOME/bin/geckodriver
 chmod +x $HOME/bin/geckodriver
