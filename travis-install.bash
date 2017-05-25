@@ -19,22 +19,21 @@ fi
 #fi
 
 #if [ "${DRIVER}" = "tests/test_webdriver_firefox.py" ]; then
-    sleep 1
 
     wget https://github.com/mozilla/geckodriver/releases/download/v0.14.0/geckodriver-v0.14.0-linux64.tar.gz
     mkdir geckodriver
     tar -xzf geckodriver-v0.14.0-linux64.tar.gz -C geckodriver
-    mv ./geckodriver/geckodriver $HOME
-    chmod 777 $HOME/geckodriver
+    mv ./geckodriver/geckodriver $HOME/bin
+    chmod 777 $HOME/bin/geckodriver
 
-    export PATH=$HOME:$HOME/geckodriver:$PATH
 #fi
 
 #if [ "${DRIVER}" = "tests/test_webdriver_chrome.py" ]; then
     sleep 1
 
-    FILE=`mktemp`; wget "http://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip" -qO $FILE && unzip $FILE chromedriver -d ~; rm $FILE; chmod 777 ~/chromedriver;
-    export PATH=$HOME:$PATH
+    FILE=`mktemp`; wget "http://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip" -qO $FILE && unzip $FILE chromedriver -d ~; mv chromedriver ~/bin/chromedriver; rm $FILE; chmod 777 ~/bin/chromedriver;
 #fi
+export PATH=$HOME:$HOME/bin:$PATH
 
-ls -l $HOME
+ls -l $HOME/bin
+print -rl -- $commands
