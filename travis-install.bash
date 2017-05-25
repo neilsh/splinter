@@ -11,9 +11,6 @@ if [ "${DRIVER}" = "tests/test_djangoclient.py" ]; then
 fi
 
 
-wget http://goo.gl/PJUZfa -O selenium-server.jar
-java -jar selenium-server.jar > /dev/null 2>&1 &
-
 wget https://github.com/mozilla/geckodriver/releases/download/v0.14.0/geckodriver-v0.16.1-linux64.tar.gz
 mkdir geckodriver
 tar -xzf geckodriver-v0.16.1-linux64.tar.gz -C geckodriver
@@ -34,3 +31,8 @@ ls -l $HOME/bin
 # confirm chromedriver and geckodriver on PATH
 which chromedriver
 which geckodriver
+
+# start selenium-server after the webdrivers
+wget https://selenium-release.storage.googleapis.com/3.4/selenium-server-standalone-3.4.0.jar -O selenium-server.jar
+java -jar selenium-server.jar > /dev/null 2>&1 &
+
