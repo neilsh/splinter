@@ -27,6 +27,12 @@ wget "http://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip" 
 mv $HOME/chromedriver $HOME/bin/chromedriver
 chmod +x $HOME/bin/chromedriver;
 
-export PATH=$HOME:$HOME/bin:$PATH
+export PATH=$HOME/bin:$PATH
 
 ls -l $HOME/bin
+
+# confirm chromedriver and geckodriver on PATH
+which chromedriver
+which geckodriver
+chromedriver -v
+geckodriver -v
