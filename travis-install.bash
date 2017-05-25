@@ -34,5 +34,3 @@ ls -l $HOME/bin
 # confirm chromedriver and geckodriver on PATH
 which chromedriver
 which geckodriver
-chromedriver -v
-geckodriver -v
