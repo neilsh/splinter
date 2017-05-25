@@ -11,7 +11,7 @@ if [ "${DRIVER}" = "tests/test_djangoclient.py" ]; then
 fi
 
 
-wget https://github.com/mozilla/geckodriver/releases/download/v0.14.0/geckodriver-v0.16.1-linux64.tar.gz
+wget https://github.com/mozilla/geckodriver/releases/download/v0.16.1/geckodriver-v0.16.1-linux64.tar.gz
 mkdir geckodriver
 tar -xzf geckodriver-v0.16.1-linux64.tar.gz -C geckodriver
 mkdir $HOME/bin
