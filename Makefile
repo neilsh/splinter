@@ -30,7 +30,7 @@ which = 'tests'
 
 test: dependencies clean
 	@echo "Running all tests..."
-	./run_tests.py -w $(which)
+	./run_tests.py -w $(which) --verbosity 2
 
 format: clean dependencies
 	@flake8 --max-line-length 110 splinter
