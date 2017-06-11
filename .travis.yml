@@ -38,4 +38,4 @@ matrix:
   exclude:
     - python: 3.4
       env: DRIVER=tests/test_zopetestbrowser.py
-script: ./run_tests.py -w ${DRIVER}
+script: ./run_tests.py --verbosity 2 -w ${DRIVER}
