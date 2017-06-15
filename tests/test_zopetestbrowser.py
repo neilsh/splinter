@@ -14,8 +14,6 @@ from .fake_webapp import EXAMPLE_APP
 from .is_element_present_nojs import IsElementPresentNoJSTest
 
 
-@unittest.skipIf(sys.version_info[0] > 2,
-                 'zope.testbrowser is not currently compatible with Python 3')
 class ZopeTestBrowserDriverTest(BaseBrowserTests, IsElementPresentNoJSTest, unittest.TestCase):
 
     @classmethod
