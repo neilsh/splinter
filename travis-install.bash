@@ -10,8 +10,10 @@ if [ "${DRIVER}" = "tests/test_djangoclient.py" ]; then
   pip install -q Django==${DJANGO_VERSION}
 fi
 
+# https://github.com/mozilla/geckodriver/releases
+# "Note that geckodriver v0.16.0 is only compatible with Selenium 3.4 and greater."
 
-wget https://github.com/mozilla/geckodriver/releases/download/v0.14.0/geckodriver-v0.14.0-linux64.tar.gz
+wget https://github.com/mozilla/geckodriver/releases/download/v0.17.0/geckodriver-v0.17.0-linux64.tar.gz
 mkdir geckodriver
 tar -xzf geckodriver-v0.14.0-linux64.tar.gz -C geckodriver
 mkdir $HOME/bin
