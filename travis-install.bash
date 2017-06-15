@@ -15,7 +15,7 @@ fi
 
 wget https://github.com/mozilla/geckodriver/releases/download/v0.17.0/geckodriver-v0.17.0-linux64.tar.gz
 mkdir geckodriver
-tar -xzf geckodriver-v0.14.0-linux64.tar.gz -C geckodriver
+tar -xzf geckodriver-v0.17.0-linux64.tar.gz -C geckodriver
 mkdir $HOME/bin
 mv ./geckodriver/geckodriver $HOME/bin/geckodriver
 chmod +x $HOME/bin/geckodriver
